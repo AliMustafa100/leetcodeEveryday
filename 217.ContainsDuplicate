@@ -1,0 +1,19 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        
+        visited=set ()
+
+        for num in nums: 
+            if num in visited:
+                return True
+            visited.add(num)
+        return False 
+
+
+        Approach: 
+
+        Here we declared a set as a way to keep track of numbers we have iterated through.
+        If nums = visited, meaning it is in visited it means we have a duplicate
+        If it isnt we append the number to the set and continue until we are done
+
+        Container --> Compare Container with List --> Either True or False 
