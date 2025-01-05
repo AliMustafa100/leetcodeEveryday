@@ -1,0 +1,22 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        
+        if len(s)!= len(t):
+            return False 
+        
+        return sorted(s)==sorted(t)
+
+
+OR 
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+
+    if lens(s) != lens(t): 
+      return False
+
+    if sorted(s)==sorted(t):
+      return True
+
+
+*sorted(s) == sorted(t) already produces a True or False result, so you don’t need an extra if condition.
