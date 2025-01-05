@@ -1,0 +1,13 @@
+class Solution:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        prevHash = {}
+        index = 0  
+
+        for num in nums:
+            diff = target - num
+            if diff in prevHash:
+                return [prevHash[diff], index]
+            prevHash[num] = index
+            index += 1  
+
+* Here we go through the list, compare it to the hash to see if it exist, return a solution or loop until true or false
